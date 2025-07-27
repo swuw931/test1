@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>С Днём рождения!🎂</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Helvetica Neue', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #d6d1ec, #c4bce3);
+      color: #333;
+      display: flex;
+      overflow: hidden;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding: 20px;
+      text-align: center;
+      overflow: auto;
+      animation: pulseBackground 10s infinite ease-in-out;
+    }
+
+    @keyframes pulseBackground {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    h1, h2, p {
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 1rem;
+      background-color: #6b5fa4;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(107, 95, 164, 0.4);
+    }
+
+    button:hover {
+      background-color: #554c8c;
+      transform: scale(1.05);
+    }
+
+    input {
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 10px;
+      border: 1px solid #aaa;
+      text-align: center;
+      margin-bottom: 10px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #dateSection, #resultSection {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    table.counter-table {
+      margin-top: 20px;
+      border-collapse: collapse;
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(107, 95, 164, 0.2);
+    }
+
+    .counter-table th, .counter-table td {
+      padding: 15px 25px;
+      font-size: 1.1rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .counter-table th {
+      background-color: #6b5fa4;
+      color: white;
+    }
+
+    .your-text {
+      margin-top: 25px;
+      font-size: 1rem;
+      max-width: 600px;
+      background: rgba(255, 255, 255, 0.3);
+      padding: 20px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 20px rgba(107, 95, 164, 0.2);
+      animation: fadeIn 2s ease forwards;
+    }
+
+    .extra-block {
+      margin-top: 30px;
+      background-color: rgba(255, 255, 255, 0.25);
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="birthdayTitle">Сегодня у тебя день рождения 🎂</h1>
+  <button onclick="showDateInput()">Жмякай</button>
+
+  <div id="dateSection">
+    <p>Введи нашу дату</p>
+    <input type="text" id="dateInput" placeholder="дд.мм.гггг" />
+    <button onclick="checkDate()">Подтвердить</button>
+  </div>
+
+  <div id="resultSection">
+    <h2>Мы вместе уже:</h2>
+    <table class="counter-table">
+      <thead>
+        <tr>
+          <th>Лет</th>
+          <th>Месяцев</th>
+          <th>Дней</th>
+          <th>Часов</th>
+          <th>Минут</th>
+          <th>Секунд</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td id="years">0</td>
+          <td id="months">0</td>
+          <td id="days">0</td>
+          <td id="hours">0</td>
+          <td id="minutes">0</td>
+          <td id="seconds">0</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="your-text" id="customText">
+      <p>
+        Ты — чудо в моей жизни 💖<br/>
+        Мы вместе с <strong>15.09.2024</strong>, и я надеюсь, что это навсегда.
+      </p>
+    </div>
+
+    <div class="your-text extra-block">
+  <p>
+   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit nulla, sit voluptatem dolore voluptate a nihil odio natus asperiores fugiat rem delectus id possimus? Dicta, perferendis aut. Ut suscipit atque aut recusandae eum necessitatibus voluptatum, impedit ad voluptate aliquid facilis fugiat qui doloribus quae provident, quo vero, magnam libero vitae. Numquam sequi corporis odio non aut ipsam necessitatibus earum eum provident tenetur? Magnam totam quis distinctio tenetur delectus beatae non nobis voluptas aperiam nemo, facilis porro, itaque laboriosam dolores velit, impedit error reprehenderit ut! Illo distinctio odio rem similique magnam! Ipsa illum nisi maiores facere voluptate quaerat dolorum nulla optio incidunt vero, sit odit, numquam nihil? Deserunt numquam repellendus esse facere fugiat debitis. Ullam veritatis, tempora magni nisi saepe earum labore, odio, sequi excepturi quia delectus dicta. Eveniet consectetur earum ducimus. Neque, autem possimus. Eveniet qui voluptas ratione alias doloremque libero eaque reiciendis delectus dolores fuga sint labore enim veniam deserunt reprehenderit modi in necessitatibus repellendus, sunt suscipit vel accusamus ducimus, commodi officiis? Expedita blanditiis placeat vitae porro aperiam voluptates quos maxime, suscipit, dolorem excepturi, repellat consectetur. Doloribus, vel dolorum amet voluptates, nam nobis dolor dolore nostrum debitis accusamus quia voluptate? Quos doloribus repellat at? Cupiditate repellat culpa dicta hic earum? Quibusdam magnam aspernatur omnis consectetur architecto explicabo voluptatum cupiditate soluta officia consequatur? Natus beatae laudantium nobis quod, magni dicta rem molestiae reprehenderit autem magnam asperiores maxime eum. Non et ratione laborum ipsa earum quam repellendus odit quidem adipisci. Quae dolorum magnam adipisci voluptatum. Reiciendis dicta nemo, minus laborum optio omnis iure consequuntur dolorum iusto similique ducimus blanditiis explicabo voluptatem aliquam deserunt unde enim culpa! Et, odit deserunt veritatis laborum, soluta blanditiis quisquam est doloremque dicta temporibus ipsa dignissimos laudantium. Corrupti enim repellendus maxime itaque officia accusantium dolore laudantium non saepe sequi, inventore dicta suscipit corporis, reiciendis, perspiciatis possimus odio dolor voluptatem aliquid facere? Corrupti repellendus harum saepe, modi nemo dolorum? Harum nihil sint pariatur, velit qui quae sequi soluta laborum explicabo hic. Nesciunt deleniti voluptas eos perspiciatis necessitatibus consequatur dicta laborum, animi, quo facilis rem amet temporibus mollitia blanditiis molestias nihil harum quidem! Atque fugiat iure quia tenetur ducimus deleniti, aut repudiandae, eius facilis ea distinctio reprehenderit quaerat adipisci rem incidunt exercitationem soluta beatae ullam perspiciatis commodi dicta, qui voluptate. Tenetur doloribus at iusto. Nihil obcaecati voluptas, inventore illo nobis, exercitationem tenetur vel magnam veniam tempore cumque rem voluptates dolores consequatur et, est laudantium placeat? Maiores similique accusantium eligendi nostrum distinctio tempora porro vitae ipsum, exercitationem atque cumque perferendis ipsam cupiditate eius! Molestiae amet eius placeat consectetur exercitationem pariatur error animi tenetur est odit incidunt in at ipsa, facere necessitatibus, commodi ipsum ab tempore vel a accusamus aliquam. Minus et adipisci perspiciatis consequatur consequuntur sequi quis, odit laudantium molestias aliquid tempora odio eligendi tenetur labore blanditiis corporis neque assumenda eius alias. Inventore, porro officiis tempore sunt ab ducimus neque, eaque accusantium distinctio expedita quia. Aliquam nam inventore dignissimos, eos alias fugit quia ad nobis expedita voluptates error fugiat, ipsum impedit excepturi temporibus sed nihil eveniet odio voluptatum laboriosam ratione.
+  </p>
+</div>
+  </div>
+
+  <script>
+    const correctDate = "15.09.2024";
+
+    function showDateInput() {
+      document.querySelector("button").style.display = "none";
+      document.getElementById("dateSection").style.display = "flex";
+    }
+
+    function checkDate() {
+      const input = document.getElementById("dateInput").value.trim();
+      if (input === correctDate) {
+        document.getElementById("dateSection").style.display = "none";
+        document.getElementById("resultSection").style.display = "flex";
+        document.getElementById("birthdayTitle").style.display = "none";
+        startLiveCounter();
+      } else {
+        alert("Попробуй ещё раз! <3");
+      }
+    }
+
+    function startLiveCounter() {
+      const start = new Date(2024, 8, 15); // 15 сентября 2024
+      function update() {
+        const now = new Date();
+        let diff = Math.floor((now - start) / 1000);
+
+        const years = Math.floor(diff / (365.25 * 24 * 3600));
+        diff %= Math.floor(365.25 * 24 * 3600);
+        const months = Math.floor(diff / (30 * 24 * 3600));
+        diff %= 30 * 24 * 3600;
+        const days = Math.floor(diff / (24 * 3600));
+        diff %= 24 * 3600;
+        const hours = Math.floor(diff / 3600);
+        diff %= 3600;
+        const minutes = Math.floor(diff / 60);
+        const seconds = diff % 60;
+
+        document.getElementById("years").textContent = years;
+        document.getElementById("months").textContent = months;
+        document.getElementById("days").textContent = days;
+        document.getElementById("hours").textContent = hours;
+        document.getElementById("minutes").textContent = minutes;
+        document.getElementById("seconds").textContent = seconds;
+      }
+
+      update();
+      setInterval(update, 1000);
+    }
+  </script>
+</body>
+</html>
